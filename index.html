@@ -1,117 +1,114 @@
 <!DOCTYPE html>
 <html>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
 <title>Yarden Schwartz site</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 <style>
-#menu
+
+.menu
   {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
     overflow: hidden;
     background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
   }
-  
-  li{
+
+  .menu a{
     float: left;
-    border-right: 1px solid #bbb;
-  }
-  
-  li a
-  {
     display: block;
-    color: white;
+    color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-size: 17px;
   }
 
-  li a:hover 
+  .menu a:hover
   {
-    background-color: #111111;
+    background: #ddd;
+    color: black;
   }
+
+
+  .main {
+    padding: 16px;
+    margin-top: 30px;
+    height: 1500px; /* Used in this example to enable scrolling */
+}
+
 
   </style>
 </head>
 <body class="body" >
-<div id="menu">
-<li><a href="#about">About Me</a></li>
-<li><a href="#photos">My Photos</a></li>
-<li><a href="#playlist">My Playlist</a></li>
-<li><a href="#like">Like</a></li>
-<li><a href="#qrcoder">QR code</a></li>
-<li><a href="#spa">Q&A</a></li>
-<li><a href="#contact">Contact Me</a></li>
+<div class="menu">
+<a href="#about">About Me</a>
+<a href="#photos">My Photos</a>
+<a href="#playlist">My Playlist</a>
+<a href="#like">Like</a>
+<a href="#qrcoder">QR code</a>
+<a href="#spa">Q&A</a>
+<a href="#contact">Contact Me</a>
 </div>
 
+<div class="main">
 <section id="about" class="section">
-
-<h1 class="center">Me</h1>
-<p>My name is Yarden Schwartz, I'm 20 years old and originally from Yoqneam Illit.
-<br>I am a third year student in the Information Systems Engeneering department in Ben Gurion University.</p> 
+<br/>
+<br/>
+<h1 class="center"><span>Me</span></h1>
+<p style="line-height: 1.5;font-size: 20px;">&nbsp&nbspMy name is Yarden Schwartz, I'm 24 years old and originally from Yoqneam Illit.<br>
+&nbsp&nbspI am a third year student in the Information Systems Engeneering department in Ben Gurion University.
+</p> 
 <br/>
 <br/>
 <br/>
 </section>
 
-
 <section id="photos">
-  
-<h1 class="center">My photos</h1>
+<h1 class="center"><span>My photos</span></h1>
 <!--gallery of pictures-->
-<div class="gallery">
-<!--cannot click on the picture-->
-    <img src="yarden.jpeg" alt="Picture of me" width="300" height="400">
-  <div class="desc">Add a description of the image here</div>
+<div class="slideshow-container">
+  <br/>
+  <br/>
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="family1.jpg" style="width:100%">
+    <div class="text">Italy</div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="family2.jpg" style="width:100%">
+    <div class="text">Italy</div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="family3.JPG" style="width:100%">
+    <div class="text">Israel, breakfast with mom and grandma</div>
+  </div>
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
-<div class="gallery">
-  <!--can click on the picture-->
-  <a target="_blank" href="yarden.jpeg">
-    <img src="yarden.jpeg" alt="Picture of me" width="300" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
+<br>
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
 </div>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<img src="yarden.jpeg" alt="Picture of me" width="300" height="400">
-<img src="yarden.jpeg" alt="Picture of me" width="300" height="400">
-<img src="yarden.jpeg" alt="Picture of me" width="300" height="400">
-<br/>
-<br/>
-<br/>
 <br/>
 <br/>
 <br/>
 </section>
 
 <section id="playlist" class="section">
-<h1 class="center">My Playlist</h1>
+<h1 class="center"><span>My Playlist</span></h1>
 <br/>
 <br/>
-<iframe class="youtube"  width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=RDEMnQxGD5N3D5CZ2fMpTy08Ng&index=1" 
-frameborder="0" style="align-self:center;" allow="autoplay; encrypted-media;" allowfullscreen></iframe>
+<br/>
+<iframe class="youtube" style="border: 8px solid #909293" width="760" height="515" src="https://www.youtube.com/embed/videoseries?list=RDEMnQxGD5N3D5CZ2fMpTy08Ng&index=1" 
+frameborder="0"  allow="autoplay; encrypted-media;" allowfullscreen ></iframe>
 </iframe>
-<br/>
 <br/>
 <br/>
 <br/>
@@ -119,22 +116,21 @@ frameborder="0" style="align-self:center;" allow="autoplay; encrypted-media;" al
 </section>
 
 <section id="like" class="section">
-<h1 class="center">Give Me A Like</h1>
+<h1 class="center"><span>Give Me A Like</span></h1>
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+<div id="likeFrame">
+  <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fsise-web-development-environments.github.io%2Fassignment1-yardenSchwartz%2F&width=400&layout=standard&action=like&size=large&share=false&height=35&appId" 
+  width="400" height="35" style="border:none;overflow:hidden" 
+  scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+</div>
 <br/>
 <br/>
 </section>
 
 <section id="qrcoder" class="section">
-  <h1 class="center">Scan My Code</h1>
+  <h1 class="center"><span>Scan My Code</span></h1>
 <br/>
 <br/>
 <br/>
@@ -152,41 +148,69 @@ frameborder="0" style="align-self:center;" allow="autoplay; encrypted-media;" al
 </section>
 
 <section id="spa" class="section">
-  <h1 class="center">Q&A</h1>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+  <h1 class="center"><span>Q&A</span></h1>
+  <p>
+    <font color="black" size="+1.5"><strong>&nbsp&nbsp 1. The Three main diffrences between web1,web2 and web3 are:</strong></font>
+    <br/>
+    <br/>
+    <table id="t">
+      <tr>
+        <th></th>
+        <th>web1</th> 
+        <th>web2</th>
+        <th>web3</th>
+      </tr>
+      <tr>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+     
+    </table>
+    <br/>
+    <font color="black" size="+1.5"><strong>&nbsp&nbsp 2. Medicines side effects Use Case</strong></font>
+    <br/>
+    <br/>
+    <br/>
+  </p>
+
 </section>
 
 <section id="contact" class="section">
-  <form>
-  <h1 class="center">Contact Me</h1>
-
-  <p>
-    <strong>Email: </strong>
-    <input type = "email" placeholder = "name@domain.com" 
+<form action="mailto:yardensch95@gmail.com?subject=" method="post" enctype="text/plain">
+<h1 class="center" ><span>Contact Me</span></h1>
+<br/>
+  <p style="font-size: 22px;">
+    <strong >Email: <strong> 
+    <input type = "email" placeholder = "name@example.com" 
        required /> (name@domain.com)
   </p>
 
-<p>
-  <strong>Subject: </strong>
+<p style="font-size: 22px;">
+  <strong>Subject:</strong>
   <input type = "subject"/> 
-
 </p>
 
-<p>
-  <strong>Message: </strong>
+<p style="font-size: 22px;">
+  <strong>Message:</strong>
+</br>
   <textarea name = "message" rows="4" cols="30"></textarea>
 </p>
 
-<p>
+<p style="font-size: 22px;">
   <input type = "submit" value = "Submit" />
   <input type = "reset" value = "Clear" />
 </p>  
@@ -194,11 +218,9 @@ frameborder="0" style="align-self:center;" allow="autoplay; encrypted-media;" al
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
 </section>
+
+</div>
 
 <script type="text/javascript">
 $(function(){
@@ -213,5 +235,36 @@ $(function(){
     $('#menu').toggle($(this).scrollTop()>1000)
  });​
  </script>
+
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+</script>
+
+
 </body>
 </html>
