@@ -76,7 +76,7 @@
     text-align: center;
     font-weight: bold;
 }
-
+/*
 div.gallery {
   margin: 5px;
   border: 1px solid #ccc;
@@ -87,7 +87,8 @@ div.gallery {
 div.gallery:hover {
   border: 1px solid #777;
 }
-
+*/
+/*
 div.gallery img {
   width: 100%;
   height: auto;
@@ -98,7 +99,7 @@ div.desc {
   text-align: center;
   font-size: x-large;
 }
-
+*/
 input[type="reset" i] {
     -webkit-appearance: push-button;
     user-select: none;
@@ -203,6 +204,7 @@ input[type="submit" i] {
   padding: 8px 12px;
   position: absolute;
   top: 3;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
 /* The dots/bullets/indicators */
