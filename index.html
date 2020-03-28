@@ -4,38 +4,6 @@
 <title>Yarden Schwartz site</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 <style>
-.menu
-  {
-    overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-  }
-
-  .menu a{
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-
-  .menu a:hover
-  {
-    background: #ddd;
-    color: black;
-  }
-
-
-  .main {
-    padding: 16px;
-    margin-top: 30px;
-    height: 1500px; /* Used in this example to enable scrolling */
-}
 
 
   </style>
@@ -105,9 +73,9 @@
 <br/>
 <br/>
 <br/>
-<iframe class="youtube" style="border: 8px solid #909293" width="760" height="515" src="https://www.youtube.com/embed/videoseries?list=RDEMnQxGD5N3D5CZ2fMpTy08Ng&index=1" 
+<iframe class="youtube" style="border: 8px solid #909293" width="760" height="515" 
+src="https://www.youtube.com/embed/videoseries?list=RDEMnQxGD5N3D5CZ2fMpTy08Ng&index=1" 
 frameborder="0"  allow="autoplay; encrypted-media;" allowfullscreen ></iframe>
-</iframe>
 <br/>
 <br/>
 <br/>
@@ -121,7 +89,7 @@ frameborder="0"  allow="autoplay; encrypted-media;" allowfullscreen ></iframe>
 <br/>
 <div id="likeFrame">
   <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fsise-web-development-environments.github.io%2Fassignment1-yardenSchwartz%2F&width=400&layout=standard&action=like&size=large&share=false&height=35&appId" 
-  width="400" height="35" style="border:none;overflow:hidden" 
+  width="300" height="35" style="border:none;overflow:hidden" 
   scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
 </div>
 <br/>
@@ -139,11 +107,10 @@ frameborder="0"  allow="autoplay; encrypted-media;" allowfullscreen ></iframe>
 
 <section id="spa" class="section">
   <h1 class="center"><span>Q&A</span></h1>
-  <p>
-    <font color="black" size="+1.5"><strong>&nbsp&nbsp 1. The Three main diffrences between web1,web2 and web3 are:</strong></font>
+  <p style="color:black">
+    <h2>&nbsp&nbsp 1. The Three main diffrences between web1,web2 and web3 are:</h2>
     <br/>
-    <br/>
-    <table id="t">
+    <table id="t" style="line-height: +1.5; font-size: large;">
       <tr>
         <th>web1</th> 
         <th>web2</th>
@@ -155,20 +122,34 @@ frameborder="0"  allow="autoplay; encrypted-media;" allowfullscreen ></iframe>
         <td>Read, write & execute web</td>
       </tr>
       <tr>
-        <td> </td>
-        <td> </td>
-        <td> </td>
+        <td>The basic web.<br>Static content, one way publishing of content<br>
+          without any interaction between readers or publishers or each other</td>
+        <td>The community web. 2 way communication</td>
+        <td>The semantic web.<br>AI and the web learning what you want in order to provide you a personalized user experience.</td>
       </tr>
       <tr>
-        <td> </td>
-        <td> </td>
-        <td> </td>
-      </tr>
-     
+        <td>You can search by specific url,retrive macro contects</td>
+        <td>There is a search engine that retrive information by tags with micro content
+        <td>There is a semantic search by the page content</td>
+        </tr>
     </table>
     <br/>
-    <font color="black" size="+1.5"><strong>&nbsp&nbsp 2. Medicines side effects Use Case</strong></font>
-    <br/>
+    <h2>&nbsp&nbsp 2. Sport side effects Use Case</h2>
+    <br/> Running side effects.
+
+    <table id="t" style="line-height: +1.5; font-size: large;">
+      <tr>
+        <th>web1</th> 
+        <th>web2</th>
+        <th>web3</th>
+      </tr>
+      <tr>
+        <td>The user need</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+
     <br/>
     <br/>
   </p>
@@ -181,32 +162,38 @@ frameborder="0"  allow="autoplay; encrypted-media;" allowfullscreen ></iframe>
 <br/>
   <p style="font-size: 22px;">
     <strong >Email: <strong> 
-    <input type = "email" placeholder = "name@example.com" 
-       required /> (name@domain.com)
+    <input type = "email" placeholder = name@domain.com 
+       required />
   </p>
 
 <p style="font-size: 22px;">
   <strong>Message:</strong>
 </br>
-  <textarea name = "message" rows="4" cols="30"></textarea>
+  <textarea name = "TextAreaName" rows="4" cols="30"></textarea>
 </p>
 
 <p style="font-size: 22px;">
   <input type = "submit" value = "Submit" />
   <input type = "reset" value = "Clear" />
-  <select name="emoji" id="emo" onclick="add()" size="1" style="height:45px;width: 45px;">
-    <option value=""></option>
-    <option value="😊">😊</option>
-    <option value="😁">😁</option>
-    <option value="😘">😘</option>
-    <option value="😍">😍</option>
-    <option value="🙏">🙏</option>
-    <option value="😴">😴</option>
-    <option value="😭">😭</option>
-    <option value="👍">👍</option>
-    <option value="👎">👎</option>
+
+  <select name="emoji" id="emo" onclick="add()" size="1" style="height:60px;width: 70px;">
+    <option value="choice">Emoji</option>
+    <option value="😊"  style='font-size:25px;'>😄</option>
+    <option value="😁"  style='font-size:25px;'>😁</option>
+    <option value="😘"  style='font-size:25px;'>😘</option>
+    <option value="😍"  style='font-size:25px;'>😍</option>
+    <option value="🙏"  style='font-size:25px;'>🙏</option>
+    <option value="😴"  style='font-size:25px;'>😴</option>
+    <option value="😭"  style='font-size:25px;'>😭</option>
+    <option value="👍"  style='font-size:25px;'>👍</option>
+    <option value="👎"  style='font-size:25px;' >👎</option>
   </select>
+
+  
+  
 </p>  
+</p>
+
 </form>
 <br/>
 <br/>
@@ -214,6 +201,8 @@ frameborder="0"  allow="autoplay; encrypted-media;" allowfullscreen ></iframe>
 </section>
 
 </div>
+
+
 
 <script type="text/javascript">
 $(function(){
@@ -255,6 +244,13 @@ $(function(){
     }
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
+  }
+</script>
+
+
+<script>
+  function selected() {
+    document.getElementById('emoji').value += val;
   }
 </script>
 
