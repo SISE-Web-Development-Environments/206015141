@@ -1,7 +1,10 @@
 
   .body{
-  font-family: Arial, Helvetica, sans-serif;
-  background-color:#CFD1D4;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('3.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% auto;
   }
 
   h1
@@ -10,15 +13,30 @@
     font-size: 2em;
     align-self: center;
     width: 100%; 
-    text-align: center; 
-    border-bottom: 1px solid #000; 
-    line-height: 0.1em;
-    margin: 10px 0 20px; 
+    text-align: center;  
+    line-height: 1.2em;
+    margin: 10px 0 20px;
+    overflow: hidden;
+    font-weight:100;
+  }
+
+  h1:before, h1:after {
+    content: "";
+    display: inline-block;
+    width: 50%;
+    margin: 0 .5em 0 -55%;
+    vertical-align: middle;
+    border-bottom: 3px solid;
+  }
+
+  h1:after {
+    margin: 0 -55% 0 .5em;
   }
 
   h1 span { 
     padding:0 10px;
-    background-color:#CFD1D4; 
+    /*display: inline-block;
+    vertical-align: middle;*/
   }
 
   .center{
