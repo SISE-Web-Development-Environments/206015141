@@ -57,7 +57,8 @@
 <br/>
 <h1 class="center"><span>Me</span></h1>
 <p style="line-height: 1.5;font-size: 20px;">&nbsp&nbspMy name is Yarden Schwartz, I'm 24 years old and originally from Yoqneam Illit.<br>
-&nbsp&nbspI am a third year student in the Information Systems Engeneering department in Ben Gurion University.
+&nbsp&nbspI am a third year student in the Information Systems Engeneering department in Ben Gurion University.<br>
+&nbsp&nbsp
 </p> 
 <br/>
 <br/>
@@ -144,25 +145,21 @@ frameborder="0"  allow="autoplay; encrypted-media;" allowfullscreen ></iframe>
     <br/>
     <table id="t">
       <tr>
-        <th></th>
         <th>web1</th> 
         <th>web2</th>
         <th>web3</th>
       </tr>
       <tr>
-        <td> </td>
-        <td> </td>
-        <td> </td>
-        <td> </td>
+        <td>Read-only web</td>
+        <td>Read & write web</td>
+        <td>Read, write & execute web</td>
       </tr>
       <tr>
         <td> </td>
         <td> </td>
         <td> </td>
-        <td> </td>
       </tr>
       <tr>
-        <td> </td>
         <td> </td>
         <td> </td>
         <td> </td>
@@ -179,7 +176,7 @@ frameborder="0"  allow="autoplay; encrypted-media;" allowfullscreen ></iframe>
 </section>
 
 <section id="contact" class="section">
-<form action="mailto:yardensch95@gmail.com?subject=" method="post" enctype="text/plain">
+<form action="mailto:yardensch95@gmail.com?subject=contact" method="post" enctype="text/plain">
 <h1 class="center" ><span>Contact Me</span></h1>
 <br/>
   <p style="font-size: 22px;">
@@ -187,11 +184,6 @@ frameborder="0"  allow="autoplay; encrypted-media;" allowfullscreen ></iframe>
     <input type = "email" placeholder = "name@example.com" 
        required /> (name@domain.com)
   </p>
-
-<p style="font-size: 22px;">
-  <strong>Subject:</strong>
-  <input type = "subject"/> 
-</p>
 
 <p style="font-size: 22px;">
   <strong>Message:</strong>
@@ -202,6 +194,18 @@ frameborder="0"  allow="autoplay; encrypted-media;" allowfullscreen ></iframe>
 <p style="font-size: 22px;">
   <input type = "submit" value = "Submit" />
   <input type = "reset" value = "Clear" />
+  <select name="emoji" id="emo" onclick="add()" size="1" style="height:45px;width: 45px;">
+    <option value=""></option>
+    <option value="😊">😊</option>
+    <option value="😁">😁</option>
+    <option value="😘">😘</option>
+    <option value="😍">😍</option>
+    <option value="🙏">🙏</option>
+    <option value="😴">😴</option>
+    <option value="😭">😭</option>
+    <option value="👍">👍</option>
+    <option value="👎">👎</option>
+  </select>
 </p>  
 </form>
 <br/>
