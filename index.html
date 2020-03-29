@@ -94,7 +94,7 @@
 <br/>
 <br/>
 <br/>
-<iframe class="youtube" style="border: 8px solid #909293" width="760" height="515" 
+<iframe class="youtube" width="760" height="515" 
 src="https://www.youtube.com/embed/videoseries?list=RDNmCFY1oYDeM&start_radio=1" 
 frameborder="0"  allow="autoplay; encrypted-media;" allowfullscreen ></iframe>
 <br/>
@@ -121,7 +121,7 @@ frameborder="0"  allow="autoplay; encrypted-media;" allowfullscreen ></iframe>
   <h1 class="center"><span>Scan My Code</span></h1>
 <br/>
 <br/>
-<img style="display: block; margin-left: auto; margin-right: auto;" src="https://chart.googleapis.com/chart?chs=150x150&amp;cht=qr&amp;
+<img id="qr" width="230" height="230" style="display: block; margin-left: auto; margin-right: auto;" src="https://chart.googleapis.com/chart?chs=150x150&amp;cht=qr&amp;
 chl=https://sise-web-development-environments.github.io/assignment1-yardenSchwartz/"/>
 <br/>
 <br/>
@@ -187,38 +187,43 @@ chl=https://sise-web-development-environments.github.io/assignment1-yardenSchwar
 
 </section>
 
-<section id="contact" class="section">
+<section id="contact" class="section" >
   <h1 class="center" ><span>Contact Me ✉</span></h1>
   
-  <form method="get" name="myMail" action="mailto:yardensch95@gmail.com?">
+  <form method="get" name="myMail"  action="mailto:yardensch95@gmail.com?" >
   <br/>
       <strong >Email: <strong> 
-      <input type = "text" name="mail" autocomplete="on" placeholder = name@domain.com required />
+      <input type = "text" name="mail" autocomplete="on" style="border:groove 4px grey;" placeholder = name@domain.com required />
       <br/><br/>
       <strong >Subject: <strong> 
-        <input type = "text" name="subject"/>
+        <input type = "text" name="subject" style="border:groove 4px grey;"/>
     
-        <br/><br/>
+    <br><br>
     <strong>Message:</strong>
     </br>
-    <textarea id="message" name = "body" rows="4" cols="30" maxlength="200" ></textarea>
-    <br/><br/>
+    <textarea id="message" name = "body" rows="4" cols="30" maxlength="200" style="border:groove 4px grey;"></textarea>
+
+    <br/>
+    <div style="display: inline;">
+      <p style="font-size: medium;"> <b>Choose Emoji :</b> </p>
+      <select name="emoji" id="emoji" size="1" style="height:45px; width: 55px; border:groove 4px grey;">
+        <option value="😄" style='font-size:25px;' selected>😄</option>
+        <option value="🙄"  style='font-size:25px;'>🙄</option>
+        <option value="😘"  style='font-size:25px;'>😘</option>
+        <option value="😍"  style='font-size:25px;'>😍</option>
+        <option value="🙏"  style='font-size:25px;'>🙏</option>
+        <option value="😴"  style='font-size:25px;'>😴</option>
+        <option value="😭"  style='font-size:25px;'>😭</option>
+        <option value="👍"  style='font-size:25px;'>👍</option>
+        <option value="👎"  style='font-size:25px;' >👎</option>
+      </select>
+      <button type = "add" value = "Add" style="border:groove 4px grey; width: 55px;" onclick="addEmo()">Add</button>
+    </div>
+    <br>
+    <br>
+    <input type = "submit" value = "Submit" maxlength="50" style="border:groove 4px grey;"  />
+    <input type = "reset" value = "Clear" style="border:groove 4px grey;" />
     
-    <input type = "submit" value = "Submit" maxlength="50" onclick="addEmo()" />
-    <input type = "reset" value = "Clear" />
-  
-    <select name="emoji" id="emoji" size="1" style="height:45px; width: 45px;">
-      <option value="😄" style='font-size:25px;' selected>😄</option>
-      <option value="🙄"  style='font-size:25px;'>🙄</option>
-      <option value="😘"  style='font-size:25px;'>😘</option>
-      <option value="😍"  style='font-size:25px;'>😍</option>
-      <option value="🙏"  style='font-size:25px;'>🙏</option>
-      <option value="😴"  style='font-size:25px;'>😴</option>
-      <option value="😭"  style='font-size:25px;'>😭</option>
-      <option value="👍"  style='font-size:25px;'>👍</option>
-      <option value="👎"  style='font-size:25px;' >👎</option>
-    </select>
-   
      
   </p>
   
@@ -260,6 +265,7 @@ $(function(){
 
 <!--Gallery script-->
 <script>
+  //Not Automaticlly
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -289,8 +295,9 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-/*
+
 //Automaticlly
+/*
 var slideIndex = 0;
 showSlides();
 
@@ -303,7 +310,7 @@ function showSlides() {
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}
   slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+  setTimeout(showSlides, 2500); // Change image every 2 seconds
 }
 */
 </script>

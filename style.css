@@ -1,22 +1,23 @@
 .menu
   {
-    overflow: hidden;
-    background-color: #333;
+    overflow: auto;
+    background-color: black;
     position: fixed;
     top: 0;
     width: 100%;
+    /*padding: 7px;*/
     z-index: 999;
   }
 
   .menu a{
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
-    
+    font-size: 20px;
+    list-style: solid;
   }
 
   .menu a:hover
@@ -77,6 +78,22 @@
     font-weight: bold;
 }
 
+input[type="add" i] {
+  -webkit-appearance: push-button;
+  user-select: none;
+  font-size: 16px;
+  white-space: pre;
+  /*align-items: flex-start;*/
+  text-align: center;
+  cursor: default;
+  box-sizing: border-box;
+  padding: 1px 6px;
+  border-width: 3px;
+  border-style: outset;
+  border-image: initial;
+}
+
+
 input[type="reset" i] {
     -webkit-appearance: push-button;
     user-select: none;
@@ -87,7 +104,7 @@ input[type="reset" i] {
     cursor: default;
     box-sizing: border-box;
     padding: 1px 6px;
-    border-width: 2px;
+    border-width: 3px;
     border-style: outset;
     border-image: initial;
 }
@@ -102,7 +119,7 @@ input[type="submit" i] {
     cursor: default;
     box-sizing: border-box;
     padding: 1px 6px;
-    border-width: 2px;
+    border-width: 3px;
     border-style: outset;
     border-image: initial;  
 }
@@ -115,7 +132,8 @@ input[type="submit" i] {
 .youtube{
   margin-left: auto;
   margin-right: auto;
-  display: block
+  display: block;
+  box-shadow: 20px 20px 30px white;
 }
 
 
@@ -124,15 +142,18 @@ input[type="submit" i] {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 650px;
+  max-width: 750px;
   position: relative;
   margin: auto;
+  border-color: thistle;
+  box-shadow: 1px 2px 14px 8px white;
 }
 
 /* Hide the images by default */
 .mySlides {
   display:none;
 }
+
 
 /* Next & previous buttons */
 .prev, .next {
@@ -155,12 +176,14 @@ input[type="submit" i] {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
+prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
 
+prev:hover, .prev:hover {
+  background-color: rgba(0,0,0,0.8);
+}
 /* Caption text */
 .text {
   color: #ffffff;
@@ -198,9 +221,11 @@ input[type="submit" i] {
   
 }
 
+
 .active, .dot:hover {
   background-color: #a5a3a3;
 }
+*/
 
 /* Fading animation */
 .fade {
@@ -221,19 +246,21 @@ input[type="submit" i] {
 }
 
 /******Q&A*******/
-table {
-  /*width:100%;*/
-  margin-left: 30px;
-}
-table, th, td {
-  border: 1px solid black;
+
+table#emojiT {
+  border:none;
   border-collapse: collapse;
 }
 
+
 th, td {
+  margin-left: 30px;
+  border: 1px solid black;
+  border-collapse: collapse;
   padding: 15px;
   text-align: left;
 }
+
 
 
 table#t tr:nth-child(even) {
