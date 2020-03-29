@@ -76,30 +76,7 @@
     text-align: center;
     font-weight: bold;
 }
-/*
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 450px;
-}
 
-div.gallery:hover {
-  border: 1px solid #777;
-}
-*/
-/*
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
-  font-size: x-large;
-}
-*/
 input[type="reset" i] {
     -webkit-appearance: push-button;
     user-select: none;
@@ -142,6 +119,7 @@ input[type="submit" i] {
 }
 
 
+/*********Gallery**********/
 * {box-sizing:border-box}
 
 /* Slideshow container */
@@ -242,7 +220,7 @@ input[type="submit" i] {
   to {opacity: 1}
 }
 
-/*Q&A*/
+/******Q&A*******/
 table {
   width:60%;
   margin-left: 30px;
@@ -268,7 +246,7 @@ table#t th {
   font-size: large;
 }
 
-/*Like*/
+/********Like*********/
 #likeFrame{
   text-align: center; 
 }
