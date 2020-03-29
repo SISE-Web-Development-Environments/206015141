@@ -188,7 +188,7 @@ chl=https://sise-web-development-environments.github.io/assignment1-yardenSchwar
 <section id="contact" class="section" >
   <h1 class="center" ><span>Contact Me ✉</span></h1>
   
-  <form method="get" name="myMail"  action="mailto:yardensch95@gmail.com?" >
+  <form method="get" action="mailto:yardensch95@gmail.com?" enctype="text/plain" >
   <br/>
       <strong >Email: <strong> 
       <input type = "text" name="mail" autocomplete="on" style="border:groove 4px grey;" placeholder = name@domain.com required />
@@ -215,12 +215,11 @@ chl=https://sise-web-development-environments.github.io/assignment1-yardenSchwar
         <option value="👍"  style='font-size:25px;'>👍</option>
         <option value="👎"  style='font-size:25px;' >👎</option>
       </select>
-      <button type = "add" value = "Add" style="border:groove 4px grey; width: 55px;" onclick="addEmo()">Add</button>
     </div>
-    <br>
-    <br>
-    <input type = "submit" value = "Submit" maxlength="50" style="border:groove 4px grey;"  />
-    <input type = "reset" value = "Clear" style="border:groove 4px grey;" />
+    <button type = "add" value = "Add" style="border:groove 4px grey; height: 44px; width: 55px; font-size: medium;" onclick="addEmo()"><b>Add</b></button>
+    <br><br>
+    <input type = "submit" value = "Submit" maxlength="50" style="border:groove 4px grey; font-weight: bold;"  />
+    <input type = "reset" value = "Clear" style="border:groove 4px grey; font-weight: bold;" />
     
      
   </p>
@@ -316,11 +315,10 @@ function showSlides() {
 
 <script>
   function addEmo() {
-
     var nameOfEmoji = document.getElementById('emoji').value;
-
     document.getElementById('message').value += nameOfEmoji;
   }
+
 </script>
 
 
