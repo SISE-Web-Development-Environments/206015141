@@ -33,8 +33,6 @@
 <br>&nbsp&nbsp In this work, the most complex part for me was understanding the basics of design and to handeling with the emoji in the mail.
 </p> 
 <br/>
-<br/>
-<br/>
 </section>
 
 <section id="photos">
@@ -190,51 +188,46 @@ chl=https://sise-web-development-environments.github.io/assignment1-yardenSchwar
 </section>
 
 <section id="contact" class="section">
-<form action="mailto:yardensch95@gmail.com?subject=contact" method="post" enctype="text/plain">
-<h1 class="center" ><span>Contact Me ✉</span></h1>
-<br/>
-  <p style="font-size: 22px;">
-    <strong >Email: <strong> 
-    <input type = "email" placeholder = name@domain.com 
-       required />
+  <h1 class="center" ><span>Contact Me ✉</span></h1>
+  
+  <form method="get" name="myMail" action="mailto:yardensch95@gmail.com?">
+  <br/>
+      <strong >Email: <strong> 
+      <input type = "text" name="mail" autocomplete="on" placeholder = name@domain.com required />
+      <br/><br/>
+      <strong >Subject: <strong> 
+        <input type = "text" name="subject"/>
+    
+        <br/><br/>
+    <strong>Message:</strong>
+    </br>
+    <textarea id="message" name = "body" rows="4" cols="30"></textarea>
+    <br/><br/>
+    
+    <input type = "submit" value = "Submit" onclick="addEmo()" />
+    <input type = "reset" value = "Clear" />
+  
+    <select name="emoji" id="emoji" size="1" style="height:45px; width: 45px;">
+      <option value="😄" style='font-size:25px;' selected>😄</option>
+      <option value="🙄"  style='font-size:25px;'>🙄</option>
+      <option value="😘"  style='font-size:25px;'>😘</option>
+      <option value="😍"  style='font-size:25px;'>😍</option>
+      <option value="🙏"  style='font-size:25px;'>🙏</option>
+      <option value="😴"  style='font-size:25px;'>😴</option>
+      <option value="😭"  style='font-size:25px;'>😭</option>
+      <option value="👍"  style='font-size:25px;'>👍</option>
+      <option value="👎"  style='font-size:25px;' >👎</option>
+    </select>
+   
+     
   </p>
-
-<p style="font-size: 22px;">
-  <strong>Message:</strong>
-</br>
-  <textarea name = "message" rows="4" cols="30"></textarea>
-</p>
-
-<p style="font-size: 22px;">
-  <input type = "submit" value = "Submit" />
-  <input type = "reset" value = "Clear" />
-
-<select name="emoji" id="emo" onclick="add()" size="1" style="height:60px;width: 70px;">
-    <option value="choice">Emoji</option>
-    <option value="😊"  style='font-size:25px;'>😄</option>
-    <option value="😁"  style='font-size:25px;'>😁</option>
-    <option value="😘"  style='font-size:25px;'>😘</option>
-    <option value="😍"  style='font-size:25px;'>😍</option>
-    <option value="🙏"  style='font-size:25px;'>🙏</option>
-    <option value="😴"  style='font-size:25px;'>😴</option>
-    <option value="😭"  style='font-size:25px;'>😭</option>
-    <option value="👍"  style='font-size:25px;'>👍</option>
-    <option value="👎"  style='font-size:25px;' >👎</option>
-  </select>
+  
+  </form>
 
   
-  
-</p>  
-</p>
-
-</form>
-<br/>
-<br/>
-<br/>
-</section>
-
-</div>
-
+  <br/>
+  <br/>
+  </section>
 
 
 <script type="text/javascript">
@@ -251,36 +244,65 @@ $(function(){
  });​
  </script>
 
+<!--Gallery script-->
 <script>
-  var slideIndex = 1;
-  showSlides(slideIndex);
-  
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
   }
-  
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
   }
-  
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}    
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+/*
+//Automaticlly
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+*/
 </script>
 
 
+<script>
+  function addEmo() {
+
+    var nameOfEmoji = document.getElementById('emoji').value;
+
+    document.getElementById('message').value += nameOfEmoji;
+  }
+</script>
 
 
 </body>
