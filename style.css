@@ -222,17 +222,20 @@ input[type="submit" i] {
 
 /******Q&A*******/
 table {
-  width:60%;
+  /*width:100%;*/
   margin-left: 30px;
 }
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
 }
+
 th, td {
   padding: 15px;
   text-align: left;
 }
+
+
 table#t tr:nth-child(even) {
   background-color: #eee;
 }
@@ -243,7 +246,7 @@ table#t th {
   background-color: #909293;
   color: black;
   text-align: center;
-  font-size: large;
+  font-size: x-large;
 }
 
 /********Like*********/
