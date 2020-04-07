@@ -1,498 +1,329 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Yarden Schwartz site</title>
-<link rel="stylesheet" type="text/css" href="style.css" />
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
-</head>
-<body class="body" >
-  
-<div class="menu">
-  <a href="#about"><b>קצת על עצמי</b></a>
-  <a href="#photos"><b> 📸 התמונות שלי </b></a>
-  <a href="#works"><b>🎨 העבודות שלי</b></a>
-  <a href="#videos"><b>🎬 סרטונים שלי</b></a>
-  <a href="#playlist"><b>🎶 המוזיקה שלי</b></a>
-  <a href="#like"><b>Like</b></a>
-  <a href="#qrcoder"><b>QR code</b></a>
-  <a href="#spa"><b>Q&A</b></a>
-  <a href="#contact"><b>✉ צור קשר</b></a>
-</div>
+.menu
+  {
+    overflow: auto;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /*padding: 7px;*/
+    z-index: 999;
+  }
 
-<div class="main">
+  .menu a{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    list-style: solid;
+  }
 
+  .menu a:hover
+  {
+    background: #ddd;
+    color: black;
+    font-size: 22px;
+  }
 
-<section id="about" class="section">
-<br/>
-<h1 class="center"><span>קצת על עצמי</span></h1>
+  .main {
+    padding: 16px;
+    margin-top: 30px;
+    height: 1500px; /* Used in this example to enable scrolling */
+  }
 
-<div id="aboutMe" style="line-height: 2;font-size: 20px; font-weight: bold;">
-  <br>
-  &nbsp&nbspקוראים לי ג'קלין,
-  <br>
-  &nbsp&nbspנולדתי בשנת 1940 בעיר קזבלנקה שבמרוקו ולי 10 אחים.
-  <br>
-  &nbsp&nbspעליתי לארץ בשנת 1963 כשהייתי בת 23, עם משלחת עליית הנוער. 
-  <br>
-  &nbsp&nbspנסענו ברכבת 🚉 עד לג'ברלטר וכעבור חודש הוטסנו 🛫 לניס שבאיטליה. 
+  @media screen and (max-width: 500px) {
+    .menu a {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
 
-  &nbspמשם לקחו אותנו באוניה 🚢 במשך 12 ימים עד שהגענו לארץ.
-  <br>
-  &nbsp&nbspכשעליתי לארץ עבדתי כתופרת ולאחר מכן בבית הבראה מגידו, שם הכרתי את בעלי ניסים.
-  <br>
-  &nbsp&nbspהתחתנתי עם ניסים בשנת 1967 במלחמת ששת הימים 💥💣 
-  <br>
-  &nbsp&nbspובשל פרוץ המלחמה נאלצנו להתחתן בבית כשהיינו אפילו פחות מ10 אנשים למניין כי כל הגברים גויסו לצבא. 
-  <br><br>
-  &nbsp&nbspאהבתי מאוד ילדים ורוב העבודות שעסקתי בהם היו סביב ילדים ששמרתי עליהם וגידלתי אותם ונשארו איתי בקשר עד היום.
-  <br>
-  &nbsp&nbspכיום מתגוררת ביוקנעם עילית, אמא ל4 ילדים נפלאים – חנה, יהודית, משה ומיכל וסבתא ל-9 נכדים מקסימים שהכניסו אור לחיים שלנו 💕.
-  <br><br>
-  &nbsp&nbspבצעירותי אהבתי להיות סביב חברים, להיות בים, לרקוד 💃, לצאת לבילויים, לטייל 🌍 ולחיות את החיים הטובים.
-  <br>
-  &nbsp&nbspאהבתי לפסל בקרמיקה, לצייר על משי, לתפור ולסרוג.
-  <br>
-  &nbsp&nbspאהבנו מאוד לארח וביליתי המון שעות במטבח בבישולים ואפייה. הילדים, הנכדים וכל מי שמכיר אותי משבח את האוכל והעוגיות שהכנתי ועודני.
-  <br>
-  <br>
-</div>
-</section>
-<div class="center">
-<h2 style="font-size: xx-large;">זו המשפחה היקרה שלי</h2>
-<img src="images/אילן יוחסין.png" alt="family">
-</div>
-<section id="photos">
-  <br>
-<h1 class="center"><span> 📸 התמונות שלי </span></h1>
-
-<!--gallery of pictures-->
-<div class="slideshow-container">
-  <br/>
-  <div class="mySlides fade">
-    <div class="numbertext" >1/18 </div>
-    <img src="images/סבתא בילדותה.jpg" style="max-height: 600px;" >
-    <div class="text">תמונה מצעירותי</div>
-  </div>
-  <div class="mySlides fade">
-    <div class="numbertext"> 2/18 </div>
-    <img src="images/friendsInMaroco1.jpg" style="width:100%">
-    <div class="text">יחד עם המשפחה במרוקו</div>
-  </div>
-  <div class="mySlides fade">
-    <div class="numbertext"> 3/18 </div>
-    <img src="images/friendsInMaroco2.jpg" style="max-height: 600px;">
-    <div class="text">יחד עם המשפחה במרוקו</div>
-  </div>
-  <div class="mySlides fade">
-    <div class="numbertext"> 4/18  </div>
-    <img src="images/wedding2.jpeg" style="width:100%">
-    <div class="text">ביום חתונתי</div>
-  </div>
-  <div class="mySlides fade">
-    <div class="numbertext"> 5/18  </div>
-    <img src="images/wedding1.jpeg" style="max-height: 600px;">
-    <div class="text">ביום חתונתי</div>
-  </div>
-  <div class="mySlides fade">
-    <div class="numbertext"> 6/18  </div>
-    <img src="images/afterWedding.jpg" style="max-height: 600px;">
-    <div class="text">יחד עם בעלי ניסים</div>
-  </div>
-  <div class="mySlides fade">
-    <div class="numbertext"> 7/18 </div>
-    <img src="images/parent's wedding.jpeg" style="width:100%">
-    <div class="text">יחד עם בעלי ניסים, בתי יהודית וחתני אבי</div>
-  </div>
-  <div class="mySlides fade">
-    <div class="numbertext">8/18 </div>
-    <img src="images/mofletot.jpg" style="max-height: 600px;">
-    <div class="text">מכינה מופלטות</div>
-  </div>
-  <div class="mySlides fade">
-    <div class="numbertext"> 9/18 </div>
-    <img src="images/cookies.jpeg" style="max-height: 600px;">
-    <div class="text">העוגיות שלי</div>
-  </div>
-  <div class="mySlides fade">
-    <div class="numbertext"> 10/18 </div>
-    <img src="images/me,mom,granma.JPG" style="width:100%">
-    <div class="text">יחד עם בתי יהודית ונכדתי ירדן</div>
-  </div>
-  <div class="mySlides fade">
-    <div class="numbertext"> 11/18 </div>
-    <img src="images/me,ariel and grandma.JPG" style="width:100%">
-    <div class="text">יחד עם הנכדות שלי אריאל וירדן</div>
-  </div>
-  <div class="mySlides fade">
-    <div class="numbertext"> 12/18 </div>
-    <img src="images/me and grandma.JPG" style="width:100%">
-    <div class="text">יחד עם נכדתי ירדן</div>
-  </div>
-  <div class="mySlides fade">
-    <div class="numbertext"> 13/18 </div>
-    <img src="images/almog'sBarMitzva.JPG" style="width:100%">
-    <div class="text">בבר המצווה של הנכד שלי אלמוג</div>
-  </div>
-  <div class="mySlides fade">
-    <div class="numbertext"> 14/18 </div>
-    <img src="images/50.JPG" style="width:100%">
-    <div class="text">The golden wedding ♥</div>
-  </div>
-  <div class="mySlides fade">
-    <div class="numbertext"> 15/18 </div>
-    <img src="images/allFamily1.JPG" style="width:100%">
-    <div class="text">כל המשפחה האהובה שלי</div>
-  </div>
-  <div class="mySlides fade">
-    <div class="numbertext"> 16/18 </div>
-    <img src="images/allFamily2.JPG" style="width:100%">
-    <div class="text">כל המשפחה האהובה שלי</div>
-  </div>
-  <div class="mySlides fade">
-    <div class="numbertext"> 17/18 </div>
-    <img src="images/yarden noam and grandma.jpeg" style="width:100%">
-    <div class="text">יחד עם הנכדות שלי נעם וירדן</div>
-  </div>
-  <div class="mySlides fade">
-    <div class="numbertext"> 18/18 </div>
-    <img src="images/allfamily3.JPG" style="width:100%">
-    <div class="text">כל המשפחה האהובה שלי</div>
-  </div>
-
-
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-
-
-<br>
-<div style="text-align:center">
-  <br>
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-  <span class="dot" onclick="currentSlide(4)"></span> 
-  <span class="dot" onclick="currentSlide(5)"></span> 
-  <span class="dot" onclick="currentSlide(6)"></span> 
-  <span class="dot" onclick="currentSlide(7)"></span> 
-  <span class="dot" onclick="currentSlide(8)"></span> 
-  <span class="dot" onclick="currentSlide(9)"></span> 
-  <span class="dot" onclick="currentSlide(10)"></span> 
-  <span class="dot" onclick="currentSlide(11)"></span> 
-  <span class="dot" onclick="currentSlide(12)"></span> 
-  <span class="dot" onclick="currentSlide(13)"></span> 
-  <span class="dot" onclick="currentSlide(14)"></span> 
-  <span class="dot" onclick="currentSlide(15)"></span> 
-  <span class="dot" onclick="currentSlide(16)"></span> 
-  <span class="dot" onclick="currentSlide(17)"></span> 
-  <span class="dot" onclick="currentSlide(18)"></span> 
-</div>
-<br/>
-<br/>
-</section>
-
-<section id="works" class="section" style="height: 125%;">
-  <h1 class="center"><span>🎨 העבודות שלי </span></h1>
-
-  <!-- Photo Grid -->
-<div class="row" style="width:80%; margin:0 auto;"> 
-  <div class="column">
-    <img src="images/1.jpeg" style="width:100%">
-    <img src="images/2.jpeg" style="width:100%">
-    <img src="images/3.jpeg" style="width:100%">
-    <img src="images/16.jpeg" style="width:100%">
-  </div>
-  <div class="column">
-    <img src="images/5.jpeg" style="width:100%">
-    <img src="images/6.jpeg" style="width:100%">
-    <img src="images/7.jpeg" style="width:100%">
-    <img src="images/8.jpeg" style="width:100%">
-  </div>  
-  <div class="column">
-    <img src="images/9.jpeg" style="width:100%">
-    <img src="images/10.jpeg" style="width:100%">
-    <img src="images/11.jpeg" style="width:100%">
-    <img src="images/12.jpeg" style="width:100%">
-    <img src="images/14.jpeg" style="width:100%">
-    
-  </div>
-  <div class="column">
-    <img src="images/13.jpeg" style="width:100%">
-    <img src="images/4.jpeg" style="width:100%; height: 40%;">
-    <img src="images/18.jpeg" style="width:100%">
-    <img src="images/15.jpeg" style="width:100%">
-  </div>
-</div>
-</section>
-
-<section id="videos" class="section">
-  <h1 class="center"><span> 🎬 הסרטונים שלי</span></h1>
-  <br/>
-  <div style="text-align: center;">
-    <h3 class="center"><span>🎉🎈 מצגת שמשפחתי היקרה הכינה לי לכבוד יום הולדתי 🎉🎈</span></h3>
-    <a href="https://drive.google.com/open?id=0Bz9Kjehy22l0ZnpCUkFZUmFmbXM">
-      <img src="images/click.png" alt="Go to glgltz!" width="150" height="150" border="0">
-    </a>
-</div>
-  <br/>
-  </section>
-
-<section id="playlist" class="section">
-<h1 class="center"><span> 🎶 המוזיקה שלי</span></h1>
-<br>
-<h2 class="center"><span>😍 אני מאוד אוהבת לשמוע שירים בצרפתית, מזכירים לי את הילדות</span></h2>
-<br>
-<iframe class="youtube" width="760" height="515" 
-src="https://www.youtube.com/embed/videoseries?list=PLGMw4BPJGh32jPVezOEfs6BTP43pmQJ-Y" 
-frameborder="0"  allow="autoplay; encrypted-media;" allowfullscreen ></iframe>
-<br/>
-<br/>
-<div class="center">
-  <h2 class="center">📻 אם גם אתם אוהבים לבשל עם מוזיקה ברקע, יש פה את ערוץ הרדיו שאני אוהבת לשמוע  </h2>
-  <a href="https://www.rlive.co.il/station/glgltz">
-  <img src="images/glg.png" alt="Go to glgltz!" width="200" height="200" border="0">
-  </a>
-</div>
-</section>
-
-<section id="like" class="section">
-<h1 class="center"><span>Give Me A Like 👍</span></h1>
-<div id="likeFrame">
-  <br>
-  <h2>😉 אם אהבתם את האתר שלי, תפרגנו לי</h2>
-  <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fsise-web-development-environments.github.io%2Fassignment1-yardenSchwartz%2F&width=400&layout=standard&action=like&size=large&share=false&height=35&appId" 
-  width="300" height="35" style="border:none;overflow:hidden" 
-  scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-  
-  <br>
-  <br>
-  <br>
-  <h2>😄 אוהבת להישאר מעודכנת </h2>
-  <div id="likeToPage">
-  <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGoren.Carine%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="250" 
-  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-  </div>
-
-  <div  id="likeToPage">
-    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F%25D7%2590%25D7%2594%25D7%25A8%25D7%2595%25D7%25A0%25D7%2599-%25D7%259E%25D7%2591%25D7%25A9%25D7%259C-349295671822146%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="250" 
-    style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-</div>
-</div>
-<br/>
-<br/>
-
-</section>
-
-<section id="qrcoder" class="section">
-  <h1 class="center"><span>Scan My Code</span></h1>
-<br/>
-<br/>
-<img id="qr" width="230" height="230" style="display: block; margin-left: auto; margin-right: auto;" src="https://chart.googleapis.com/chart?chs=150x150&amp;cht=qr&amp;
-chl=https://sise-web-development-environments.github.io/assignment1-yardenSchwartz/"/>
-<br/>
-<br/>
-</section>
-
-<section id="spa" class="section">
-  <h1 class="center"><span>❔ <b style="font-size: larger;"> & </b> ❕</span></h1>
-  <p style="color:black">
-    <h2>&nbsp&nbsp 1. The Three main diffrences between web1,web2 and web3 are:</h2>
-    <br/>
-    <table id="t" style="line-height: +1.5; font-size: large;">
-      <col width="450">
-      <col width="450">
-      <col width="450">
-      <tr>
-        <th>web1</th> 
-        <th>web2</th>
-        <th>web3</th>
-      </tr>
-     
-      <tr>
-        <td>Read-only web</td>
-        <td>Read & write web</td>
-        <td>Read, write & execute web</td>
-      </tr>
-      
-      <tr>
-        <td>The basic web.<br>Static content, one way publishing of content
-          without any interaction between readers or publishers or each other</td>
-        <td>The community web. <br>2 way communication</td>
-        <td>The semantic web.<br>AI and the web learning what you want in order to provide you a personalized user experience.</td>
-      </tr>
-      <tr>
-        <td>You can search by specific url, retrive macro contects</td>
-        <td>There is a search engine that retrive information by tags with micro content
-        <td>There is a semantic search by the page content</td>
-        </tr>
-    </table>
-    <br/>
-    <h2>&nbsp&nbsp 2. Sport side effects Use Case</h2>
-    <br/>
-    <table id="t" style="line-height: +1.5; font-size: large;">
-      <col width="450">
-      <col width="450">
-      <col width="450">
-      <tr>
-        <th>web1</th> 
-        <th>web2</th>
-        <th>web3</th>
-      </tr>
-      <tr>
-        <td>The user need to entered a specific URL of a site that talking about sport effects in order to see it</td>
-        <td>The user can search the query - "Sport side effects" and the search engine will show him a list of links 
-          to sites that contain tags of the words in the query </td>
-        <td>The user can search the query - "Sport side effects" and the search engine will show him a list of links to 
-          sites that include the sites that web2 will display and sites with the same semantics as the query topic</td>
-      </tr>
-    </table>
-
-    <br/>
-    <br/>
-  </p>
-
-</section>
-
-<section id="contact" class="section" >
-  <h1 class="center" ><span>✉ תדברו איתי</span></h1>
-  <p>
-    <b>😊 עכשיו כשאני בבית ואי אפשר לצאת אשמח לשמוע מכם </b>
-  </p>
-  <form method="get" action="mailto:yardensch95@gmail.com?" enctype="text/plain" >
-  <br/>
-      <strong >Email: <strong> 
-      <input type = "text" name="mail" autocomplete="on" style="border:groove 4px grey;" placeholder = name@domain.com required />
-      <br/><br/>
-      <strong >Subject: <strong> 
-        <input type = "text" name="subject" style="border:groove 4px grey;"/>
-    
-    <br><br>
-    <strong>Message:</strong>
-    </br>
-    <textarea id="message" name = "body" rows="4" cols="30" maxlength="200" style="border:groove 4px grey;"></textarea>
-
-    <br/>
-    <div style="display: inline;">
-      <p style="font-size: medium;"> <b>Choose Emoji :</b> </p>
-      <select name="emoji" id="emoji" size="1" style="height:45px; width: 55px; border:groove 4px grey;">
-        <option value="😄" style='font-size:25px;' selected>😄</option>
-        <option value="🙄"  style='font-size:25px;'>🙄</option>
-        <option value="😘"  style='font-size:25px;'>😘</option>
-        <option value="😍"  style='font-size:25px;'>😍</option>
-        <option value="🙏"  style='font-size:25px;'>🙏</option>
-        <option value="😴"  style='font-size:25px;'>😴</option>
-        <option value="😭"  style='font-size:25px;'>😭</option>
-        <option value="👍"  style='font-size:25px;'>👍</option>
-        <option value="👎"  style='font-size:25px;' >👎</option>
-      </select>
-    </div>
-    <button type = "add" value = "Add" style="border:groove 4px grey; height: 44px; width: 55px; font-size: medium;" onclick="addEmo()"><b>Add</b></button>
-    <br><br>
-    <input type = "submit" value = "Submit" maxlength="50" style="border:groove 4px grey; font-weight: bold;"  />
-    <input type = "reset" value = "Clear" style="border:groove 4px grey; font-weight: bold;" />
-    
-     
-  </p>
-  
-  </form>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  </section>
-
-</div>
-
-<script type="text/javascript">
-$(function(){
-  $("#nav a").click(function(e){
-    e.preventDefault();
-    $('html,body').scrollTo(this.hash,this.hash); 
-  });
-});
-</script>
-<script type="text/javascript">
- $(document).scroll(function() {
-    $('#menu').toggle($(this).scrollTop()>1000)
- });​
- </script>
-
-<!--Gallery script-->
-<script>
-  //Not Automaticlly
-var slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+	.prev, .next,.text {font-size: 11px}
 }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+.body, .html{
+  height: 100%;
+  margin: 0;
 }
+  .body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('images/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 150% 100%;
+    background-position: center;
+  }
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+ 
+  h1
+  {
+    display: block;
+    font-size: 2em;
+    align-self: center;
+    width: 100%; 
+    text-align: center;  
+    line-height: 1.2em;
+    margin: 10px 0 20px;
+    overflow: hidden;
+    font-weight:100;
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+
+  h1:before, h1:after {
+    content: "";
+    display: inline-block;
+    width: 50%;
+    margin: 0 .5em 0 -55%;
+    vertical-align: middle;
+    border-bottom: 3px solid;
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+
+  h1:after {
+    margin: 0 -55% 0 .5em;
+  }
+
+  h1 span { 
+    padding:0 10px;
+    /*display: inline-block;
+    vertical-align: middle;*/
+  }
+
+.center{
+    text-align: center;
+    font-weight: bold;
 }
 
 
-//Automaticlly
-/*
-var slideIndex = 0;
-showSlides();
+input[type="reset" i] {
+    -webkit-appearance: push-button;
+    user-select: none;
+    font-size: 16px;
+    white-space: pre;
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    box-sizing: border-box;
+    padding: 1px 6px;
+    border-width: 6px;
+    border-style: outset;
+    border-image: initial;
+}
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 2500); // Change image every 2 seconds
+input[type="submit" i] {
+  font-size: 16px;
+  -webkit-appearance: push-button;
+    user-select: none;
+    white-space: pre;
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    box-sizing: border-box;
+    padding: 1px 6px;
+    border-width: 6px;
+    border-style: outset;
+    border-image: initial;  
+}
+
+#aboutMe{
+  direction: rtl;
+  background-image: url('images/shelf1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right;
+  background-size: 100% 100%;
+  border-style: solid;
+}
+
+#contact{
+  text-align: center;
+  font-size: 130%;
+}
+
+#likeToPage{
+  display: inline;
+}
+
+.youtube{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  box-shadow: 12px 12px 20px white;
+}
+
+
+/*********Gallery**********/
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 800px;
+  max-height: 800px;
+  position: relative;
+  margin: auto;
+  /*box-shadow: 12px 12px 20px white;*/
+}
+
+/* Hide the images by default */
+.mySlides {
+  display:none;
+  text-align: center;
+}
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+prev:hover, .prev:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+/* Caption text */
+.text {
+  color: #ffffff;
+  font-size: 32px;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  font-weight: bold;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 12px;
+  position: absolute;
+  top: 3;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgb(78, 76, 76);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+
+.active, .dot:hover {
+  background-color: #a5a3a3;
 }
 */
-</script>
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/*****works******/
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 20%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
 
 
-<script>
-  function addEmo() {
-    var nameOfEmoji = document.getElementById('emoji').value;
-    document.getElementById('message').value += nameOfEmoji;
-  }
-
-</script>
 
 
-</body>
-</html>
+/******Q&A*******/
+
+table#emojiT {
+  border:none;
+  border-collapse: collapse;
+}
+
+
+th, td {
+  margin-left: 30px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 15px;
+  text-align: left;
+}
+
+
+
+table#t tr:nth-child(even) {
+  background-color: #eee;
+}
+table#t tr:nth-child(odd) {
+ background-color: #fff;
+}
+table#t th {
+  background-color: #909293;
+  color: black;
+  text-align: center;
+  font-size: x-large;
+}
+
+/********Like*********/
+#likeFrame{
+  text-align: center; 
+}
+
