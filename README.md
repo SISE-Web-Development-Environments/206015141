@@ -1,4 +1,4 @@
-# Jaklin's page
+# My grandmother's page
 
 Hello, my name is yarden schwartz and that's my first work in html.	
 
