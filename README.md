@@ -1,4 +1,4 @@
-# Yarden's page
+# Jaklin's page
 
 Hello, my name is yarden schwartz and that's my first work in html.	
 
