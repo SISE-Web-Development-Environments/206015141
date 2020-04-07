@@ -387,10 +387,13 @@ chl=https://sise-web-development-environments.github.io/assignment1-yardenSchwar
     <br><br>
     <input type = "submit" value = "Submit" maxlength="50" style="border:groove 4px grey; font-weight: bold;"  />
     <input type = "reset" value = "Clear" style="border:groove 4px grey; font-weight: bold;" />
-    
-     
   </p>
-  
+  <script>
+    function addEmo() {
+      var nameOfEmoji = document.getElementById('emoji').value;
+      document.getElementById('message').value += nameOfEmoji;
+    }
+  </script>
   </form>
   <br/>
   <br/>
@@ -479,16 +482,6 @@ function showSlides() {
 }
 */
 </script>
-
-
-<script>
-  function addEmo() {
-    var nameOfEmoji = document.getElementById('emoji').value;
-    document.getElementById('message').value += nameOfEmoji;
-  }
-
-</script>
-
 
 </body>
 </html>
