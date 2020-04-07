@@ -467,9 +467,6 @@ input[type="submit" i] {
   font-size: 130%;
 }
 
-#likeToPage{
-  display: inline;
-}
 
 .youtube{
   margin-left: auto;
@@ -648,5 +645,9 @@ table#t th {
 /********Like*********/
 #likeFrame{
   text-align: center; 
+}
+
+#likeToPage{
+  display: inline;
 }
 
