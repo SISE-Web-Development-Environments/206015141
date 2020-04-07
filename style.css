@@ -33,8 +33,22 @@
     height: 1500px; /* Used in this example to enable scrolling */
   }
 
+  @media screen and (max-width: 500px) {
+    .menu a {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+	.prev, .next,.text {font-size: 11px}
+}
+
   .body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url('images/background.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -110,9 +124,23 @@ input[type="submit" i] {
     border-image: initial;  
 }
 
+#aboutMe{
+  direction: rtl;
+  background-image: url('images/shelf1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right;
+  background-size: 100% 100%;
+  border-style: solid;
+}
+
 #contact{
   text-align: center;
   font-size: 130%;
+}
+
+#likeToPage{
+  display: inline;
 }
 
 .youtube{
@@ -128,15 +156,17 @@ input[type="submit" i] {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 50%;
+  max-width: 800px;
+  max-height: 800px;
   position: relative;
   margin: auto;
-  box-shadow: 12px 12px 20px white;
+  /*box-shadow: 12px 12px 20px white;*/
 }
 
 /* Hide the images by default */
 .mySlides {
   display:none;
+  text-align: center;
 }
 
 
@@ -228,6 +258,33 @@ prev:hover, .prev:hover {
   from {opacity: .4}
   to {opacity: 1}
 }
+
+/*****works******/
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 20%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+
+
 
 /******Q&A*******/
 
